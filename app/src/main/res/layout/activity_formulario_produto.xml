@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.FormularioProdutoActivity">
+
+        <EditText
+            android:id="@+id/activity_nome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Nome"
+            android:layout_margin="16dp"
+            android:inputType="text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/activity_descricao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Descrição"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/activity_nome"
+            app:layout_constraintStart_toStartOf="@id/activity_nome"
+            app:layout_constraintEnd_toEndOf="@id/activity_nome"/>
+
+        <EditText
+            android:id="@+id/activity_valor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Valor"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="@id/activity_descricao"
+            app:layout_constraintTop_toBottomOf="@id/activity_descricao"
+            app:layout_constraintEnd_toEndOf="@id/activity_descricao"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Salvar"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_valor" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
